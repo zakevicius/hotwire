@@ -7,7 +7,9 @@ class QuotesController < ApplicationController
     @quotes = current_company.quotes.recent
   end
 
-  def show; end
+  def show
+    @line_item_dates = @quote.line_item_dates.recent
+  end
 
   def new
     @quote = Quote.new
