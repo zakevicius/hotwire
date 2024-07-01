@@ -8230,15 +8230,15 @@ var application = Application.start();
 application.debug = false;
 window.Stimulus = application;
 
-// app/javascript/controllers/hello_controller.js
-var hello_controller_default = class extends Controller {
-  connect() {
-    this.element.textContent = "Hello World!";
+// app/javascript/controllers/removals_controller.js
+var removals_controller_default = class extends Controller {
+  remove() {
+    this.element.remove();
   }
 };
 
 // app/javascript/controllers/index.js
-application.register("hello", hello_controller_default);
+application.register("removals", removals_controller_default);
 /*! Bundled license information:
 
 @hotwired/turbo/dist/turbo.es2017-esm.js:
